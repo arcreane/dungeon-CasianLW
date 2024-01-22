@@ -1,0 +1,94 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{490AC3F3-EE9A-4706-BD1A-C03D78A0767D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ConsoleApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>DungeonGame</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>GameManager</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommunatingClass.cs" />
+    <Compile Include="ConsoleUserInterface.cs" />
+    <Compile Include="Potion.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Weapons\Arrows.cs" />
+    <Compile Include="Weapons\Arsenal.cs" />
+    <Compile Include="Barbarian.cs" />
+    <Compile Include="Cape.cs" />
+    <Compile Include="Chest.cs" />
+    <Compile Include="Weapons\Claw.cs" />
+    <Compile Include="Weapons\Dagger.cs" />
+    <Compile Include="Dungeon.cs" />
+    <Compile Include="Weapons\Fire.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="GameManager.cs" />
+    <Compile Include="Hero.cs" />
+    <Compile Include="Weapons\IceArrow.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="Ligthning.cs" />
+    <Compile Include="Magician.cs" />
+    <Compile Include="Monster.cs" />
+    <Compile Include="Pendant.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Protection.cs" />
+    <Compile Include="Room.cs" />
+    <Compile Include="Shield.cs" />
+    <Compile Include="Weapons\Spike.cs" />
+    <Compile Include="Weapons\Sword.cs" />
+    <Compile Include="Thief.cs" />
+    <Compile Include="WaterFlask.cs" />
+    <Compile Include="Weapons\Weapon.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
